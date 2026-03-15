@@ -63,3 +63,12 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/local/rvm/scripts/rvm
 
 export LANG=en_US.UTF-8
+
+# History search (MacOS-style)
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey "${key[Up]}"   up-line-or-beginning-search
+bindkey "${key[Down]}" down-line-or-beginning-searc
