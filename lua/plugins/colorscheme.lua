@@ -11,6 +11,7 @@
 --    end,
 --  },
 --}
+--
 return {
   {
     "olimorris/onedarkpro.nvim",
@@ -33,17 +34,17 @@ return {
             orange    = "#f0b030",
           }
         },
-        highlights = {
-          ["@variable"]         = { fg = "${fg}" },
-          ["@keyword"]          = { fg = "${purple}" },
-          ["@function"]         = { fg = "${blue}" },
-          ["@string"]           = { fg = "${green}" },
-          ["@number"]           = { fg = "${orange}" },
-          ["@type"]             = { fg = "${yellow}" },
-          ["@comment"]          = { fg = "${black}" },
-          ["@constant"]         = { fg = "${cyan}" },
-          ["@parameter"]        = { fg = "${red}" },
-        },
+        -- highlights = {
+        --  ["@variable"]         = { fg = "${fg}" },
+        --  ["@keyword"]          = { fg = "${purple}" },
+        --  ["@function"]         = { fg = "${blue}" },
+       --   ["@string"]           = { fg = "${green}" },
+      --    ["@number"]           = { fg = "${orange}" },
+     --     ["@type"]             = { fg = "${yellow}" },
+    --      ["@comment"]          = { fg = "${black}" },
+   --       ["@constant"]         = { fg = "${cyan}" },
+  --        ["@parameter"]        = { fg = "${red}" },
+ --       },
         options = {
           cursorline = true,
         }
