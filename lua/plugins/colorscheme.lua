@@ -46,6 +46,7 @@ return {
   --        ["@parameter"]        = { fg = "${red}" },
  --       },
         options = {
+          transparency = true,
           cursorline = true,
         }
       })
