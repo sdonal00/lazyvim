@@ -6,3 +6,6 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.breakindentopt = "shift:1"
+vim.opt.fillchars = {
+  eob = "~",
+}
