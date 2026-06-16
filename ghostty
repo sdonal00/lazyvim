@@ -49,7 +49,7 @@
 
 # theme = Monokai Soda
 # theme = onedark
-theme = onedark_saturated
+theme = onedark_dark
 background-opacity = 1
 mouse-scroll-multiplier = 1
 font-feature = -dlig
