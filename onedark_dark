@@ -1,23 +1,32 @@
-# Colors - https://github.com/olimorris/onedarkpro.nvim
+# OneDark theme for Ghostty
 
-palette = 0=#000000
-palette = 1=#ef596f
-palette = 2=#89ca78
-palette = 3=#e5c07b
-palette = 4=#61afef
-palette = 5=#d55fde
-palette = 6=#2bbac5
-palette = 7=#abb2bf
-palette = 8=#434852
-palette = 9=#f38897
-palette = 10=#a9d89d
-palette = 11=#edd4a6
-palette = 12=#8fc6f4
-palette = 13=#e089e7
-palette = 14=#4bced8
-palette = 15=#c8cdd5
-background = #000000
-foreground = #abb2bf
-cursor-color = #ffffff
-selection-background = #d55fde
-selection-foreground = #abb2bf
+background = #1f2329
+foreground = #a0a8b7
+
+# Cursor
+cursor-color = #a0a8b7
+cursor-text = #1f2329
+
+# Selection
+selection-background = #274964
+selection-foreground = #a0a8b7
+
+# Normal colors (0-7)
+palette = 0=#0e1013
+palette = 1=#e55561
+palette = 2=#8ebd6b
+palette = 3=#e2b86b
+palette = 4=#4fa6ed
+palette = 5=#bf68d9
+palette = 6=#48b0bd
+palette = 7=#a0a8b7
+
+# Bright colors (8-15)
+palette = 8=#535965
+palette = 9=#e55561
+palette = 10=#8ebd6b
+palette = 11=#e8c88c
+palette = 12=#61afef
+palette = 13=#bf68d9
+palette = 14=#48b0bd
+palette = 15=#7a818e
