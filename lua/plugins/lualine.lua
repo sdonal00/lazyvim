@@ -58,7 +58,7 @@ return {
     function()
       local mode_map = {
         n = "NORMAL", i = "INSERT", v = "VISUAL", V = "V-LINE",
-        ["\22"] = "V-BLOCK", c = "COMMAND", R = "REPLACE",
+        ["\22"] = "V-BLOCK", c = "COMMAND", R = "REPLACE", t = "TERMINAL"
       }
       return "[" .. (mode_map[vim.fn.mode()] or vim.fn.mode()) .. "]"
     end,
