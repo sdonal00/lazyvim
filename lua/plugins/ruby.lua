@@ -19,20 +19,26 @@ return {
         ruby_lsp = {
           enabled = true,
           cmd = function(dispatchers, config)
-            local root = config.root_dir
-            local gemfile = root and (root .. "/Gemfile")
-            local has_bundled_lsp = gemfile
-              and vim.fn.filereadable(gemfile) == 1
-              and vim.fn.system('grep -q "ruby-lsp" ' .. vim.fn.shellescape(gemfile) .. " && echo yes"):match("yes")
+            local gemfile = vim.fn.expand("~/.config/nvim/ruby-lsp/Gemfile")
+            local gemfile_dir = vim.fn.fnamemodify(gemfile, ":h")
 
-            local cmd_parts = has_bundled_lsp
-              and { "bundle", "exec", "ruby-lsp" }
-              or { "ruby-lsp" }
+            -- Copy current environment and point BUNDLE_GEMFILE at the
+            -- standalone Gemfile, so the project repo is never touched.
+            local env = vim.fn.environ()
+            env.BUNDLE_GEMFILE = gemfile
+
+            -- local env_list = {}
+            -- for k, v in pairs(env) do
+            --   table.insert(env_list, k .. "=" .. tostring(v))
+            -- end
 
             return vim.lsp.rpc.start(
-              cmd_parts,
+              { "bundle", "exec", "ruby-lsp" },
               dispatchers,
-              config and config.root_dir and { cwd = config.cmd_cwd or config.root_dir }
+              {
+                cwd = gemfile_dir,
+                env = env,
+              }
             )
           end,
           init_options = {
